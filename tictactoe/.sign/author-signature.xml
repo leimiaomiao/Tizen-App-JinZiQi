@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>29d9QC03xmYE8p+L+3mKgl69xkRVPw1TnLdDTNkZn5M=</DigestValue>
+<DigestValue>E+Yejy1+CZUBVWyG+HCTlSSos8CmjhH0763TP00GAxA=</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -21,6 +21,10 @@
 <Reference URI="game3.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>fgqkDaWQRkrIN9Xd8/vKUb1vqJqHEN+vj3N/e9ihYHQ=</DigestValue>
+</Reference>
+<Reference URI="icon.jpg">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>w1DwG/MV96yv8PTr2WdjQ3P2X3/jr6SgYsdUZyQQ0PQ=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -2179,9 +2183,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-QFCGgYYqSl6pNZ02IWX5q3O025L7RaJLYL8M6Vat06NS0PKz7q+G97JCe8sk6dg5LC1AzaTVLtxe
-k1lQLnzGXOwyEC1VAHkEiKeuRGEAWvBQwXS+Ld7EKeSMzOOft1pF4u3nTkLXvFHD1tYN+mNZZIki
-wPUR8/wagck+i2t1hw4=
+DBu+2F5Pzum0KInWObgTXVHXWBUpvYIA2qPMDjZULylHWCU0My/NZZrFjKtAnhY+mGpHyZoQC+SL
+HMkN3XsD6llrHFJY8sfcDeOXRgWZnn3IROeJe//eyMGpfsj2RVY0HpowUjMAPF3dMsPGjKz6/Q1m
+MsgsHtZNWnv4bma1hpQ=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
