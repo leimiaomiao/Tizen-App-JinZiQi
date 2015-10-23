@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>54RGlRYIHp+IxxZjOTOvn/DX904CfXOhkucRQqtxYUQ=</DigestValue>
+<DigestValue>ABUZxouHu5miwb78B+X7X6egbcHsfcwW4qSnyG6uwzY=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -12,19 +12,19 @@
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>mm/qfPVk5qlb95kHs5PHHhY2npluQUQ9UCUyZBCJeYY=</DigestValue>
+<DigestValue>Vlc8mv9CjCgVtOz7X/V+wIvVZIq7H6HV/9GUNVayuFU=</DigestValue>
 </Reference>
 <Reference URI="game1.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>wrXgXH99rSNMegovnxnlNmrhNF1RhwPjzcQqZ5mQ4n8=</DigestValue>
+<DigestValue>xQxWvhw9icNVIHuww0lX1hGzJW6FsnmL62Fr7xO7s8g=</DigestValue>
 </Reference>
 <Reference URI="game2.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>bVMA5bWJPdCgzvrrr++Nw8oYcmpM3L31BKMzW3BnZZI=</DigestValue>
+<DigestValue>FNR1Yagc4MOeo/i5X6Su4/BDOzp/x3z2nFr4vBbvf/Y=</DigestValue>
 </Reference>
 <Reference URI="game3.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>PVyJ6vOje56KcnY3e80qMMTbK+sdD5opTfaZYoEfPsc=</DigestValue>
+<DigestValue>fgqkDaWQRkrIN9Xd8/vKUb1vqJqHEN+vj3N/e9ihYHQ=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -32,7 +32,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>dmbIgE9+rswds7aArNAoNwceTj08riWJr06nEGa2GvQ=</DigestValue>
+<DigestValue>DULFmrXU/4qij1kdmkEh9Y4iwU458vIwmH3vHXhQn0o=</DigestValue>
 </Reference>
 <Reference URI="js%2Flufylegend-1.6.0.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -44,15 +44,15 @@
 </Reference>
 <Reference URI="js%2Fmain1.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>e5KvT1FIFjWXNfTPakCdendJ7rg23o9TC6r0nIrfA1E=</DigestValue>
+<DigestValue>/bB+tdsnd7KIYt8uJAgSiIp6XyghN8mJymbgT8VtIb4=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain2.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>7azsZ1vaflkOiFLQiALz20p+yODYRyy3IIoXSZild/k=</DigestValue>
+<DigestValue>MxDtmNSJ7ZdTZJROm8u2IcqSaS2OKNNdtWG/lDsUa9c=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain3.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>MCwDYyXC8zcbxvRgVJHNLCF9rLjdEMiX+HyKtfrSMKI=</DigestValue>
+<DigestValue>z0APWQT5vLvFXMKSt7qNu/Cw+CMtFnyDGn+Ss2klkFw=</DigestValue>
 </Reference>
 <Reference URI="lib%2Fjquery.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -2183,9 +2183,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-rByecoEhNPvXhE5UHs6kSYIokTfp/n7zd5AurNee31UI8Tjh3OyzkMESc8MF2R1BhDcG3NZJLyA7
-njidfMKIff5NtYXCucf+Xpc8SYM7vJs8fAJDmWX7CN+hh7Xvn5U0H51DbfbvktIKx3dCo/9fSFa+
-EOhNpLFctJBJoe04Rp8=
+Hv1bgWNBlvtBNkJlGsVTt4uBuHyzUXAfiEgb4qODqpbhxVq69EMgy/7TVTAcA2q70cxyvblawDx8
+QeB5LrfMUWfy3715W5oUgNc0FnIjO8ATbCchRdm906/vDrWyjVPDzoIprHUbpatA6JVRZpoOeIQG
+cY+b6PCue5VD6AJunQM=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

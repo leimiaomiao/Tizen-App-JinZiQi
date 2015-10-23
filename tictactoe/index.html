@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
+
+<script type="text/javascript">
+	window.addEventListener('tizenhwkey', function(e) {
+		if (e.keyName == "back") {
+			try {
+				tizen.application.getCurrentApplication().exit();
+			} catch (error) {
+				console.error("getCurrentApplication(): " + error.message);
+			}
+		}
+	}, false);
+</script>
 <head>
-	<meta charset="GB2312" />
-	<title>井字棋</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>浜曞瓧妫�</title>
 </head>
 <body>
-	<div><a href="game1.html">双人游戏<div>
-	<div><a href="game2.html">人机对战（玩家先走）<div>
-	<div><a href="game3.html">人机对战（玩家后走）<div>
+	<h2>TicTacToe</h2>
+	<ul>
+		<li>
+			<div>
+				<a href="game1.html">鍙屼汉娓告垙</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				<a href="game2.html">浜烘満瀵规垬锛堢帺瀹跺厛璧帮級</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				<a href="game3.html">浜烘満瀵规垬锛堢帺瀹跺悗璧帮級</a>
+			</div>
+		</li>
+	</ul>
 </body>
 </html>

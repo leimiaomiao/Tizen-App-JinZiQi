@@ -1,7 +1,25 @@
-init(30,"mylegend",390,420,main);
+if(LGlobal.canTouch){
+	LGlobal.stageScale = LStageScaleMode.EXACT_FIT;
+	LSystem.screen(LStage.FULL_SCREEN);
+}
+function doScroll() {
+	if(window.pageYOffset === 0) {
+		window.scrollTo(0, 1);
+	}
+}
+window.onload = function() {
+	setTimeout(doScroll, 100);
+	init(50,"mylegend",300,420,main,LEvent.INIT);
+}
+window.onorientationchange = function() {
+	setTimeout(doScroll, 100);
+};
+window.onresize = function() {
+	setTimeout(doScroll, 100);
+}
 var backLayer,chessLayer,overLayer;
 var statusText = new LTextField();
-var statusContent="µçÄÔÕıÔÚË¼¿¼ÖĞ¡­¡­";
+var statusContent="æ‚¨å…ˆè¯·å§â€¦â€¦";
 var matrix = [
 	[0,0,0],
 	[0,0,0],
@@ -9,9 +27,20 @@ var matrix = [
 ];
 var usersTurn = true;
 var step = 0;
-var title = "¾®×ÖÆå";
+var title = "äº•å­—æ£‹";
 var introduction = ""
 var infoArr = [title,introduction];
+
+
+window.addEventListener('tizenhwkey', function(e) {
+	if(e.keyName == "back") {
+		try {
+			tizen.application.getCurrentApplication().exit();
+		} catch (error) {
+			console.error("getCurrentApplication(): " + error.message);
+		}
+	}
+},false);
 
 function main(){
 	gameInit();
@@ -41,8 +70,8 @@ function onDown(){
 	mouseX = event.offsetX;
 	mouseY = event.offsetY;
 
-	var partX = Math.floor(mouseX/130);
-	var partY = Math.floor(mouseY/130);
+	var partX = Math.floor(mouseX/100);
+	var partY = Math.floor(mouseY/100);
 	if(matrix[partX][partY]==0){
 		usersTurn=false;
 		matrix[partX][partY]=-1;
@@ -50,15 +79,15 @@ function onDown(){
 		update(partX,partY);
 		
 		if(win(partX,partY)){
-			statusContent = "Ë§´ôÁË£¬ÄãÓ®À²£¡µã»÷ÆÁÄ»ÖØ¿ªÓÎÏ·¡£";
+			statusContent = "å¸…å‘†äº†ï¼Œä½ èµ¢å•¦ï¼ç‚¹å‡»å±å¹•é‡å¼€æ¸¸æˆã€‚";
 			gameover();
 			addText();
 		}else if(isEnd()){
-			statusContent = "Æ½¾ÖÀ²~~µã»÷ÆÁÄ»ÖØ¿ªÓÎÏ·¡£";
+			statusContent = "å¹³å±€å•¦~~ç‚¹å‡»å±å¹•é‡å¼€æ¸¸æˆã€‚";
 			gameover();
 			addText();
 		}else{
-			statusContent = "µçÄÔÕıÔÚË¼¿¼ÖĞ¡­¡­";
+			statusContent = "ç”µè„‘æ­£åœ¨æ€è€ƒä¸­â€¦â€¦";
 			addText();
 			computerThink();
 		}
@@ -75,22 +104,22 @@ function addText(){
 	overLayer.addChild(statusText);
 }
 function addLattice(){
-	backLayer.graphics.drawRect(10,"dimgray",[0,0,390,420],true,"dimgray");
-	backLayer.graphics.drawRect(10,"dimgray",[0,0,390,390],true,"lavender");
+	backLayer.graphics.drawRect(10,"dimgray",[0,0,300,420],true,"dimgray");
+	backLayer.graphics.drawRect(10,"dimgray",[0,0,300,300],true,"lavender");
 	for(var i=0;i<3;i++){
-		backLayer.graphics.drawLine(3,"dimgray",[130*i,0,130*i,390]);
+		backLayer.graphics.drawLine(3,"dimgray",[100*i,0,100*i,300]);
 	}
 	for(var i=0;i<3;i++){
-		backLayer.graphics.drawLine(3,"dimgray",[0,130*i,390,130*i]);
+		backLayer.graphics.drawLine(3,"dimgray",[0,100*i,300,100*i]);
 	}
 }
 function update(x,y){
 	var v = matrix[x][y];
 	if(v>0){
-		chessLayer.graphics.drawArc(10,"green",[x*130+65,y*130+65,40,0,2*Math.PI]);
+		chessLayer.graphics.drawArc(10,"green",[x*100+50,y*100+50,40,0,2*Math.PI]);
 	}else if(v<0){
-		chessLayer.graphics.drawLine(20,"#CC0000",[130*x+30,130*y+30,130*(x+1)-30,130*(y+1)-30]);
-		chessLayer.graphics.drawLine(20,"#CC0000",[130*(x+1)-30,130*y+30,130*x+30,130*(y+1)-30]);
+		chessLayer.graphics.drawLine(20,"#CC0000",[100*x+30,100*y+30,100*(x+1)-30,100*(y+1)-30]);
+		chessLayer.graphics.drawLine(20,"#CC0000",[100*(x+1)-30,100*y+30,100*x+30,100*(y+1)-30]);
 	}
 }
 function computerThink(){
@@ -102,15 +131,15 @@ function computerThink(){
 	update(x,y);
 	
 	if(win(x,y)){
-		statusContent = "¹ş¹şÄãÊäÁË£¡µã»÷ÆÁÄ»ÖØ¿ªÓÎÏ·¡£";
+		statusContent = "å“ˆå“ˆä½ è¾“å•¦~ç‚¹å‡»å±å¹•é‡å¼€æ¸¸æˆã€‚";
 		gameover();
 		addText();
 	}else if(isEnd()){
-		statusContent = "Æ½¾ÖÀ²~~µã»÷ÆÁÄ»ÖØ¿ªÓÎÏ·¡£";
+		statusContent = "å¹³å±€å•¦~~ç‚¹å‡»å±å¹•é‡å¼€æ¸¸æˆã€‚";
 		gameover();
 		addText();
 	}else{
-		statusContent = "¸ÃÄãÁË£¡£¡£¡";
+		statusContent = "ç”µè„‘æ­£åœ¨æ€è€ƒä¸­â€¦â€¦";
 		addText();
 	}
 }
@@ -211,7 +240,7 @@ function gameover(){
 		];
 		step = 0;
 		main();
-		statusContent = "ÄúÏÈÇë°É¡­¡­";
+		statusContent = "æ‚¨å…ˆè¯·å§â€¦â€¦";
 		addText();
 	});
 }
